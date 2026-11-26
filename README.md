@@ -1,0 +1,244 @@
+\# Enterprise Identity Lifecycle Automation with Terraform and Microsoft Entra ID
+
+
+
+\## Project Overview
+
+
+
+This project demonstrates identity lifecycle management (Joiner, Mover, Leaver) using Microsoft Entra ID, Microsoft Graph PowerShell, and Terraform.
+
+
+
+The goal is to automate employee identity provisioning and department-based access management in a fictional healthcare organization.
+
+
+
+All employee records used in this project are synthetic.
+
+
+
+\## Technology Stack
+
+
+
+\- Microsoft Entra ID
+
+\- Microsoft Graph PowerShell SDK
+
+\- Terraform
+
+\- Azure CLI
+
+\- PowerShell
+
+\- Git and GitHub
+
+
+
+\## Architecture
+
+
+
+1\. Synthetic employee information is maintained in a CSV file.
+
+2\. Microsoft Graph PowerShell is used to provision the test user identity.
+
+3\. Terraform retrieves the user from Microsoft Entra ID.
+
+4\. Terraform manages department security group membership.
+
+5\. Terraform state provides a record of managed infrastructure resources.
+
+
+
+\## Implemented Features
+
+
+
+\- Configured Terraform Azure AD provider.
+
+\- Authenticated Terraform against Microsoft Entra ID.
+
+\- Created five department security groups:
+
+&#x20; - IT
+
+&#x20; - HR
+
+&#x20; - Finance
+
+&#x20; - Clinical
+
+&#x20; - Operations
+
+\- Provisioned a synthetic Joiner account using Microsoft Graph PowerShell.
+
+\- Configured Terraform to look up the user.
+
+\- Successfully deployed Terraform-managed IT department group membership.
+
+\- Configured Git exclusions for Terraform state, local provider files, and sensitive variable files.
+
+
+
+\## Identity Lifecycle Scope
+
+
+
+| Workflow | Status |
+
+|---|---|
+
+| Joiner — create test identity | Implemented and tested |
+
+| Joiner — department group assignment | Implemented and tested |
+
+| Bulk employee provisioning | Planned |
+
+| Mover — department transfer | Planned |
+
+| Leaver — account disablement | Planned |
+
+| Access verification and audit reporting | Planned |
+
+
+
+\## Department Security Groups
+
+
+
+| Group | Purpose |
+
+|---|---|
+
+| SG-IT-Users | IT department access |
+
+| SG-HR-Users | HR department access |
+
+| SG-Finance-Users | Finance department access |
+
+| SG-Clinical-Users | Clinical department access |
+
+| SG-Operations-Users | Operations department access |
+
+
+
+\## Repository Structure
+
+
+
+```text
+
+terraform-iam-jml/
+
+├── data/
+
+│   └── employees.csv
+
+├── terraform/
+
+│   ├── main.tf
+
+│   ├── groups.tf
+
+│   ├── joiner.tf
+
+│   ├── test.tf
+
+│   └── .terraform.lock.hcl
+
+├── documentation/
+
+├── screenshots/
+
+└── .gitignore
+
+```
+
+
+
+\## Security Considerations
+
+
+
+\- Uses synthetic employee records only.
+
+\- Temporary passwords are handled outside Terraform.
+
+\- Passwords are not committed to GitHub.
+
+\- Terraform state files are excluded from version control.
+
+\- Local Terraform provider working files are excluded.
+
+\- No employer accounts or production identities are used.
+
+
+
+\*\*Important:\*\* Terraform state can contain sensitive identity and infrastructure information. It must be protected and stored securely.
+
+
+
+\## Deployment and Validation
+
+
+
+The Terraform configuration was validated using:
+
+
+
+```powershell
+
+terraform init
+
+terraform validate
+
+terraform plan
+
+terraform apply
+
+terraform state list
+
+```
+
+
+
+Microsoft Graph PowerShell was used to provision the synthetic test identity, while Terraform manages its department group membership.
+
+
+
+\## Project Status
+
+
+
+Version 1.0 — Initial Joiner workflow implemented and tested.
+
+
+
+Future development will focus on bulk employee processing, automated Mover and Leaver workflows, and improved access auditing.
+
+
+
+\## Learning Objectives
+
+
+
+This project demonstrates practical experience with:
+
+
+
+\- Identity and Access Management (IAM)
+
+\- Infrastructure as Code (IaC)
+
+\- Microsoft Entra ID administration
+
+\- Microsoft Graph automation
+
+\- Terraform resource and data-source management
+
+\- Department-based access control
+
+\- Secure configuration and Git practices
+
