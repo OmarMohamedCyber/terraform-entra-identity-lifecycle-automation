@@ -242,3 +242,11 @@ This project demonstrates practical experience with:
 
 \- Secure configuration and Git practices
 
+- Implemented and tested a Leaver workflow using Microsoft Graph PowerShell.
+
+\- Disabled Bonnie Clyde's synthetic HR account in Microsoft Entra ID.
+
+\- Verified the account's AccountEnabled property was False.
+
+\- Successfully revoked the user's sign-in sessions.
+
