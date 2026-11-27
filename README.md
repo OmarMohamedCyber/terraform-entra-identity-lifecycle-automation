@@ -79,6 +79,23 @@ All employee records used in this project are synthetic.
 \- Successfully deployed Terraform-managed IT department group membership.
 
 \- Configured Git exclusions for Terraform state, local provider files, and sensitive variable files.
+- Implemented and tested a Leaver workflow using Microsoft Graph PowerShell.
+
+\- Disabled Bonnie Clyde's synthetic HR account.
+
+\- Verified the account's AccountEnabled property was False.
+
+\- Successfully revoked the user's sign-in sessions.
+
+\- Implemented and tested a Mover workflow using Microsoft Graph PowerShell.
+
+\- Removed Emily Davis from the Finance security group.
+
+\- Updated her Entra ID department attribute from Finance to HR.
+
+\- Added her to the HR security group.
+
+\- Verified the department attribute and final group membership.
 
 
 
@@ -90,17 +107,19 @@ All employee records used in this project are synthetic.
 
 |---|---|
 
-| Joiner — create test identity | Implemented and tested |
+| Joiner — account creation | Implemented and tested |
 
-| Joiner — department group assignment | Implemented and tested |
+| Joiner — IT group assignment | Implemented and tested |
+
+| Mover — Finance-to-HR transfer | Implemented and tested |
+
+| Leaver — account disablement | Implemented and tested |
+
+| Leaver — sign-in session revocation | Implemented and tested |
 
 | Bulk employee provisioning | Planned |
 
-| Mover — department transfer | Planned |
-
-| Leaver — account disablement | Planned |
-
-| Access verification and audit reporting | Planned |
+| Automated access auditing | Planned |
 
 
 
@@ -212,11 +231,15 @@ Microsoft Graph PowerShell was used to provision the synthetic test identity, wh
 
 
 
-Version 1.0 — Initial Joiner workflow implemented and tested.
+Version 2.0 — Joiner, Mover, and Leaver workflows implemented and tested in a Microsoft Entra ID lab environment.
 
 
 
-Future development will focus on bulk employee processing, automated Mover and Leaver workflows, and improved access auditing.
+\- Joiner: Created a synthetic user and assigned IT group membership.
+
+\- Mover: Transferred a synthetic user from Finance to HR and updated group membership.
+
+\- Leaver: Disabled a synthetic user account and revoked its sign-in sessions.
 
 
 
@@ -242,21 +265,15 @@ This project demonstrates practical experience with:
 
 \- Secure configuration and Git practices
 
-- Implemented and tested a Leaver workflow using Microsoft Graph PowerShell.
-
-\- Disabled Bonnie Clyde's synthetic HR account in Microsoft Entra ID.
+- Disabled Bonnie Clyde's synthetic HR account in Microsoft Entra ID.
 
 \- Verified the account's AccountEnabled property was False.
 
 \- Successfully revoked the user's sign-in sessions.
 
-- Implemented and tested a Mover workflow using Microsoft Graph PowerShell.
-
-\- Removed Emily Davis from the Finance security group.
+- Removed Emily Davis from the Finance security group.
 
 \- Updated her Entra ID department attribute from Finance to HR.
 
 \- Added her to the HR security group.
-
-\- Verified the department attribute and final group membership.
 
