@@ -250,3 +250,13 @@ This project demonstrates practical experience with:
 
 \- Successfully revoked the user's sign-in sessions.
 
+- Implemented and tested a Mover workflow using Microsoft Graph PowerShell.
+
+\- Removed Emily Davis from the Finance security group.
+
+\- Updated her Entra ID department attribute from Finance to HR.
+
+\- Added her to the HR security group.
+
+\- Verified the department attribute and final group membership.
+
