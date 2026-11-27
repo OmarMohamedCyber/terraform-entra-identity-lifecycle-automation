@@ -10,5 +10,5 @@ terraform {
 }
 
 provider "azuread" {
-  tenant_id = "6b67d246-582a-4be3-85d8-409fe4cceee7"
+  tenant_id = var.tenant_id
 }

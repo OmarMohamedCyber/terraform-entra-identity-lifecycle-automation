@@ -79,7 +79,9 @@ All employee records used in this project are synthetic.
 \- Successfully deployed Terraform-managed IT department group membership.
 
 \- Configured Git exclusions for Terraform state, local provider files, and sensitive variable files.
-- Implemented and tested a Leaver workflow using Microsoft Graph PowerShell.
+- Parameterized the Entra tenant ID using a Terraform input variable and the TF\_VAR\_tenant\_id environment variable.
+
+* Implemented and tested a Leaver workflow using Microsoft Graph PowerShell.
 
 \- Disabled Bonnie Clyde's synthetic HR account.
 
@@ -159,6 +161,8 @@ terraform-iam-jml/
 
 │   ├── main.tf
 
+│   ├── variables.tf
+
 │   ├── groups.tf
 
 │   ├── joiner.tf
@@ -172,7 +176,6 @@ terraform-iam-jml/
 ├── screenshots/
 
 └── .gitignore
-
 ```
 
 
@@ -264,16 +267,4 @@ This project demonstrates practical experience with:
 \- Department-based access control
 
 \- Secure configuration and Git practices
-
-- Disabled Bonnie Clyde's synthetic HR account in Microsoft Entra ID.
-
-\- Verified the account's AccountEnabled property was False.
-
-\- Successfully revoked the user's sign-in sessions.
-
-- Removed Emily Davis from the Finance security group.
-
-\- Updated her Entra ID department attribute from Finance to HR.
-
-\- Added her to the HR security group.
 
